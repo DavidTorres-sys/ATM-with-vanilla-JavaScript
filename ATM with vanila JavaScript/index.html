@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles-account.css" rel="stylesheet" media="">
+  <title>Alpaca Bank</title>
+</head>
+<body>
+  <header>
+    <div id="logo">Alpaca Bank</div>
+  </header>
+  <section class='section'>
+    <div class='divContainer'>
+    <form class="form" action="" method="POST" autocomplete="off">
+      <p class="container">
+        <i class="fas fa-money-bill-wave"></i>
+        <label for="">Depositar Dinero</label>
+      </p>
+      <div class=divAccountNumber>
+        <label for="">Número de Cuenta</label>
+        <input class="accountNumber" type="number" placeholder="Número de Cuenta">
+      </div>
+      <div id="divDollars">
+        <i class="fas fa-dollar-sign"></i>
+        <input type="number" class="accountNumber" id="deposit_input" placeholder="Valor a Depositar" required>
+        <h3>USD</h3>
+      </div>
+      <br>
+      <div id='divconfirm'>
+        <input type="button" id="deposit_button" value='Confirmar' class="button">
+      </div>
+    </form>
+    <form class="form" action="" method="POST" autocomplete="off">
+      <div class="consult">
+        <p class="container">
+          <i class="fas fa-wallet"></i>
+          <label for="saldo"> Consultar Saldo</label>
+        <p>Saldo actual</p>
+          <i class="fas fa-dollar-sign"></i>
+          <input type="text"  id='balance_input' readonly disabled>
+        </p>
+        <p>
+          <input type="button" id="balance_button" class="button" value='Consultar Saldo'>
+        </p>
+      </div>
+    </form>
+    <form class="form" action="" method="POST" autocomplete="off"> 
+      <p class="container">
+        <i class="fas fa-money-bill-wave"></i>
+        <label for="">Retirar Dinero</label>
+      </p>
+      <div class=divAccountNumber>
+        <label for="">Número de Cuenta</label>
+        <input type="number" class="accountNumber" placeholder="Número de Cuenta">
+      </div>
+      <div id="divDollars">
+        <i class="fas fa-dollar-sign"></i>
+        <input type="number" class="valueRetirement" id='retirement_input' placeholder="Valor a Retirar" required>
+        <h3>USD</h3>
+      </div>
+      <br>
+      <p>
+        <input type="button" id='retirement_button' value='Confirmar' class="button">
+      </p>
+    </form>
+  </div>
+  <div>
+    <div class='divRecord'>
+      <p id='record'>Historial de Movimientos</p>
+      <p id='dealings_record'></p>
+    </div>
+        <p class='transactionRealize'>Operaciones realizadas</p>
+      <div class="transaction">
+        <div class="opDeposit">
+          <p id='recordTop'>Consignaciones </p>
+          <p id='dealings_recordTop'>0</p>
+        </div>
+        <div class="opRetirement">
+          <p id='recordTop'>Retiros</p>
+          <p id='dealings_recordBot'>0</p>
+        </div>
+    </div>
+  </div>
+  </section>
+  <script src="https://kit.fontawesome.com/7d1ccd1155.js" crossorigin="anonymous"></script>
+  <script src="js/main.js" type='module'></script>
+</body>
+</html>
