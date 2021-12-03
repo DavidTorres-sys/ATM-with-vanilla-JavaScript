@@ -1,11 +1,11 @@
 export default class Account {
-  #retirement;
+  #withdraw;
   #balance = 0;
   #deposit;
 
-  constructor(balance, retirement, deposit){
+  constructor(balance, withdraw, deposit){
     this.#balance = balance;
-    this.#retirement = retirement;
+    this.#withdraw = withdraw;
     this.#deposit = deposit;
   }
 
@@ -18,9 +18,9 @@ export default class Account {
     alert('Depósito Exitoso');
   }
 
-  calcRetirement(retirement){
-    if (this.#balance >= retirement){
-      this.#balance = this.#balance - retirement;
+  calcWithdraw(withdraw){
+    if (this.#balance >= withdraw){
+      this.#balance = this.#balance - withdraw;
       alert('Retiro Exitoso');
     }
     else{
@@ -28,8 +28,8 @@ export default class Account {
     }
   }
 
-  get retirement() {
-    return this.#retirement;
+  get withdraw() {
+    return this.#withdraw;
   }
 
   get deposit() {
@@ -40,8 +40,8 @@ export default class Account {
     return this.#balance;
   }
 
-  set retirement(newValue) {
-    this.#retirement = newValue
+  set withdraw(newValue) {
+    this.#withdraw = newValue
   }
 
   set deposit(newValue) {

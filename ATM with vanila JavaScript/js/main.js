@@ -24,35 +24,36 @@ function calcBalance() {
 const balanceButton = document.getElementById('balance_button');
 balanceButton.addEventListener('click', calcBalance);
 
-// Retirement
-function retirement() {
-  retirement = parseFloat(document.getElementById('retirement_input').value);
-  account.calcRetirement(retirement)
+// withdraw
+function withdraw() {
+  withdraw = parseFloat(document.getElementById('withdraw_input').value);
+  account.calcWithdraw(withdraw)
 
   let dealingsRecord = document.getElementById('dealings_record');
-  dealingsRecord.innerHTML += 'Retiro ' + '-' + retirement + ' USD' + "<hr />";
+  dealingsRecord.innerHTML += 'Retiro ' + '-' + withdraw + ' USD' + "<hr />";
 
 }
 
-const retirementButton = document.getElementById('retirement_button');
-retirementButton.addEventListener('click', retirement);
+const withdrawButton = document.getElementById("withdraw_button");
+withdrawButton.addEventListener('click', withdraw);
 
 //# transaction
 
 const btnDeposit = document.getElementById('deposit_button');
-const btnRetirement = document.getElementById('retirement_button');
+const btnWithdraw = document.getElementById('withdraw_button');
 const spanDeposit = document.getElementById('dealings_recordTop');
-const spanRetirement = document.getElementById('dealings_recordBot')
-let contador = 0
-let retirementcounter = 0
+const spanWithdraw = document.getElementById('dealings_recordBot')
+let counter = 0
+let withdrawcounter = 0
 
 btnDeposit.addEventListener('click', () => { 
-  contador++
-  spanDeposit.textContent =  contador
+  counter++
+  spanDeposit.textContent =  counter
 })
 
 
-btnRetirement.addEventListener('click', () => { 
-  retirementcounter++
-  spanRetirement.textContent =  retirementcounter
+btnWithdraw.addEventListener('click', () => { 
+  withdrawcounter++
+  spanWithdraw.textContent =  withdrawcounter
+
 })
